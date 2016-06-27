@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<input type="text" id="sample">
+
+<script type="text/javascript">
+document.getElementById('sample').addEventListener('blur', function(e){
+  localStorage.setItem('YAHOO.JP.sample.value', this.value);
+});
+
+window.addEventListener('load', function(e){
+  document.getElementById('sample').value = localStorage.getItem('YAHOO.JP.sample.value');
+});
+</script>
+</body>
+</html>
